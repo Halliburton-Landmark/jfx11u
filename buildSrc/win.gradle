@@ -139,7 +139,7 @@ ext.WINDOWS_NATIVE_COMPILE_ENVIRONMENT = [
         "LIBPATH"              : WINDOWS_VS_LIBPATH,
         "DXSDK_DIR"            : WINDOWS_DXSDK_DIR
 ];
-def msvcVer = System.getenv("MSVC_VER") ?: "14.10.25017"
+def msvcVer = System.getenv("MSVC_VER") ?: "14.29.30133"
 def msvcBinDir = ""
 if (hasProperty('toolchainDir')) {
     msvcBinDir = "$WINDOWS_VS_VSINSTALLDIR/VC/bin/$CPU_BITS"
@@ -184,7 +184,7 @@ def msvcRedstDir
 if (hasProperty('toolchainDir')) {
     msvcRedstDir = "$WINDOWS_VS_VSINSTALLDIR/VC/Redist/$CPU_BITS"
 } else {
-    def msvcRedistVer = System.getenv("MSVC_REDIST_VER") ?: "14.10.25008"
+    def msvcRedistVer = System.getenv("MSVC_REDIST_VER") ?: "14.29.30133"
     msvcRedstDir = "$WINDOWS_VS_VSINSTALLDIR/VC/Redist/MSVC/$msvcRedistVer/$CPU_BITS"
 }
 
